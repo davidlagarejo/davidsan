@@ -1,8 +1,31 @@
 # DavidSan
 
-Base abierta de `DavidSan`: un agente construido sobre `Phi-4` para ayudarte a comunicar mejor tu valor, tu narrativa profesional y tu propuesta personal sin exponer datos privados.
+`DavidSan` es un agente construido sobre `Phi-4` para ayudarte a convertir contexto personal y profesional en una narrativa más clara, útil y presentable, sin exponer datos privados.
 
-Este repositorio publica la parte compartible del proyecto: estructura técnica inicial, paquete Python base, tests y lineamientos para crecer en abierto con sugerencias de la comunidad.
+La intención del proyecto es simple: usar IA para expresar mejor lo que una persona hace, cómo piensa y por qué aporta valor, pero sin convertir esa ayuda en una fuga de información.
+
+Este repositorio contiene la parte pública y compartible del proyecto: base técnica, estructura inicial del paquete, tests, documentación y espacio para crecer en abierto con feedback de la comunidad.
+
+## Por qué existe
+
+Muchas herramientas ayudan a escribir mejor, pero pocas están pensadas para representar a una persona con criterio, contexto elegido y privacidad por defecto.
+
+`DavidSan` nace para explorar justo eso:
+
+- convertir experiencia y contexto en mensajes más claros
+- ayudar a presentar valor sin exagerar ni sobreexponer
+- usar IA como apoyo de formulación, no como sustituto de identidad
+- construir una base técnica abierta que otros puedan revisar y mejorar
+
+## Qué intenta resolver
+
+`DavidSan` apunta a casos como:
+
+- redactar una mejor presentación profesional
+- reformular una propuesta de valor personal
+- sintetizar experiencia en un tono más claro y sólido
+- convertir contexto disperso en mensajes utilizables
+- experimentar con asistentes personales que no dependan de publicar datos sensibles
 
 ## Qué es hoy
 
@@ -13,17 +36,27 @@ Este repositorio publica la parte compartible del proyecto: estructura técnica 
 - tests de humo para validar entorno
 - carpetas preparadas para prompts, ejemplos, scripts, configs y documentación
 
-No pretende ser una versión completa del agente todavía. Es una base pública y limpia para iterar en abierto.
+No es todavía una implementación completa del agente. Es una base pública, limpia y verificable para construir en abierto.
 
 ## Enfoque del proyecto
 
-La idea detrás de `DavidSan` es construir un asistente que:
+La dirección del proyecto hoy es construir un asistente que:
 
 - ayude a presentar mejor el valor de una persona o proyecto
 - use `Phi-4` como motor base para generación y reformulación
 - use contexto elegido de forma deliberada, no extracción indiscriminada de datos
 - proteja información privada por defecto
 - sea auditable, versionable y mejorable por comunidad
+
+## Qué hace interesante este repo
+
+Aunque el proyecto esté en fase inicial, este repo ya muestra varias cosas útiles de cara a comunidad, colaboradores o recruiters:
+
+- una idea concreta con criterio de producto
+- una preocupación explícita por privacidad
+- una base técnica reproducible
+- intención de abrir diseño, no solo resultado final
+- una forma seria de publicar trabajo en progreso
 
 ## Qué se publica y qué no
 
@@ -57,6 +90,15 @@ No se publica:
 | `configs/` | Configuraciones públicas y seguras |
 | `examples/` | Ejemplos de uso y prototipos |
 
+## Cómo correrlo localmente
+
+```bash
+python3.12 -m venv .venv
+source .venv/bin/activate
+pip install -e ".[dev]"
+pytest
+```
+
 ## Principios de publicación
 
 Este repositorio está preparado para publicarse sin exponer datos sensibles:
@@ -68,20 +110,6 @@ Este repositorio está preparado para publicarse sin exponer datos sensibles:
 
 Si propones una contribución, por favor evita subir cualquier dato personal identificable.
 
-## Instalación
-
-```bash
-python3.12 -m venv .venv
-source .venv/bin/activate
-pip install -e ".[dev]"
-```
-
-## Verificación rápida
-
-```bash
-pytest
-```
-
 ## Estado
 
 Estado actual:
@@ -91,13 +119,23 @@ Estado actual:
 - tests de humo funcionando
 - documentación pública inicial lista para revisión
 
-Próximos pasos razonables:
+Siguientes pasos razonables:
 
 - añadir módulos reales del asistente
 - definir contratos de entrada y salida
 - incorporar ejemplos de prompts seguros
 - ampliar la integración operativa con `Phi-4`
 - publicar una arquitectura inicial de privacidad y gobernanza ligera
+
+## Roadmap abierto
+
+Busco especialmente sugerencias sobre:
+
+- diseño del flujo del agente
+- estructura de prompts y evaluación
+- límites de privacidad y sanitización
+- experiencia de uso para perfil profesional y storytelling
+- empaquetado del proyecto como herramienta reusable
 
 ## Comunidad
 
